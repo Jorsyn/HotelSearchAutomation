@@ -15,13 +15,13 @@ Place the webdriver in your computer's PATH or add the location of webdriver to 
 How to use:
 1. cd into the HotelSearchAutomation folder and run:
 
-python setup.py
+	py setup.py
 
 - This will install the selenium package for python
 
 2. Run the test using the following code:
 
-python main.py
+ py main.py
 
 - This will run the main script and execute test 1 followed by test 2
 

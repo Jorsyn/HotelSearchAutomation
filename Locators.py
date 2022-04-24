@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 # page 1
 accept_button_id = "didomi-notice-agree-button"
 search_input_id = "mbe-destination-input"
-dates_selector = "mbe-dates-select"
+dates_selector = "//div[@id='mbe-dates-select']"
 xpath_available_dates = "//div[@class='mbe-calendar']//li[contains(@class,'available')]"
 rooms_input_id = "mbe-rooms-input"
 accept_rooms_xpath = "//div[@class='mbe-room-btn']/button[@class='mbe-btn']"
