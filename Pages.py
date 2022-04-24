@@ -38,8 +38,7 @@ class SearchPage(BasePage):
     def chose_first_two_available_dates(self):
         dates_input = WebDriverWait(self.driver, 15).until(
             EC.element_to_be_clickable((By.ID, Locators.dates_selector)))
-        dates_input.click()
-        time.sleep(2)
+        self.driver.execute_script("arguments[0].click();", dates_input)
         available_dates = self.driver.find_elements(By.XPATH, Locators.xpath_available_dates)
         available_dates[0].click()
         available_dates[1].click()

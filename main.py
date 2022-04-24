@@ -30,7 +30,7 @@ class Tests(unittest.TestCase):
         self.page.chose_first_two_available_dates()
         self.page.accept_rooms()
         self.page.get_search_results()
-        print('End of task 1')
+        print('Task 1 finished successfully')
 
     def test_2_list_all_rooms_on_page(self):
         print('\nStarting task 2')
