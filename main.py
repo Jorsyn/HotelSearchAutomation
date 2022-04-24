@@ -4,12 +4,16 @@ import Pages
 
 page1 = "https://www.melia.com/es/home.htm"
 page2 = "https://www.melia.com/es/hoteles/espana/madrid/melia-castilla/habitaciones.htm"
-
+print("Note: This script requires selenium and google chrome with a version matching a GC webdriver located in PATH to work")
+print("Google chrome webdriver version 100 it attached to this project")
 
 class Tests(unittest.TestCase):
     def setUp(self):
         # Opening the browser
-        self.driver = webdriver.Chrome()
+        # This will be the path if you clone the github repository to the default location: home
+        options = webdriver.ChromeOptions()
+        options.add_experimental_option('excludeSwitches', ['enable-logging'])
+        self.driver = webdriver.Chrome(options=options)
         # browser should be loaded in maximized window
         self.driver.maximize_window()
 
@@ -17,7 +21,7 @@ class Tests(unittest.TestCase):
         # Closing the browser
         self.driver.quit()
 
-    def test_1_search_random_location_and_dates_Melia(self):
+    def test_1_search_random_location_and_dates(self):
         print('\nStarting task 1')
         self.page = Pages.SearchPage(self.driver)
         self.page.navigate_to(page1)
@@ -37,3 +41,5 @@ class Tests(unittest.TestCase):
         print('Task 2 finished successfully')
 
 
+if __name__ == '__main__':
+    unittest.main()
